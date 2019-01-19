@@ -11,8 +11,11 @@
                 <div class="form-group">
                     {!! Form::label('content', 'タスク:') !!}
                     {!! Form::text('content', null, ['class' => 'form-control']) !!}
-                </div>
-                
+                    
+                    {!! Form::label('status', 'タスクの状況:') !!}
+                    {!! Form::select('status', ['未完了' => '未完了', '完了' => '完了'], null, ['placeholder' => '選択して下さい']); !!}
+                    
+                </div>    
                 {!! Form::submit('更新', ['class' => 'btn btn-light']) !!}
         
             {!! Form::close() !!}
